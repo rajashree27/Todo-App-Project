@@ -1,6 +1,6 @@
 import * as actions from "./actionTypes";
 
-const token = JSON.parse(localStorage.getItem("token")) || "";
+const token = localStorage.getItem("token");
 
 const initialState = {
 	isAuth: !!token,
@@ -16,7 +16,7 @@ export const reducerAuth = (state = initialState, { type, payload }) => {
 		}
 		case actions.LOGIN_SUCCESS: {
 			localStorage.setItem("token", payload.token);
-			console.log("login success")
+			console.log("login success");
 			return { ...state, isAuth: true, isLoading: false };
 		}
 		case actions.LOGIN_FAILURE: {

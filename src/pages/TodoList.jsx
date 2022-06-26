@@ -1,8 +1,8 @@
 import { Box, Button, Checkbox, Heading, Text } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {getTodoList} from "../redux/todos/actions"
 
 const TodoList = () => {
@@ -39,7 +39,7 @@ const TodoList = () => {
 
 	useEffect(() => {
 		dispatch(getTodoList());
-	}, []);
+	}, [dispatch]);
 
 	if (isLoading) {
 		return <Text fontSize='xl' as='i'>Loading!!!...</Text>;

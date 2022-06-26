@@ -46,37 +46,39 @@ const Login = () => {
 	return (
 		<div className={style.loginMainDiv}>
 			<Heading size="lg">Enter login details:</Heading>
-			<FormControl action="submit" onSubmit={handleLoginSubmit}>
-				<FormLabel mt={4}>Enter email address:</FormLabel>
-				<Input
-					placeholder="Enter email..."
-					value={loginCreds.email}
-					onChange={handleLoginChange}
-					type="email"
-					name="email"
-				/>
-
-				<FormLabel mt={4}>Enter password:</FormLabel>
-				<InputGroup size="md">
+			<form action="submit" onSubmit={handleLoginSubmit}>
+				<FormControl>
+					<FormLabel mt={4}>Enter email address:</FormLabel>
 					<Input
-						pr="4.5rem"
-						type={show ? "text" : "password"}
-						placeholder="Enter password..."
-						name="password"
-						value={loginCreds.password}
+						placeholder="Enter email..."
+						value={loginCreds.email}
 						onChange={handleLoginChange}
+						type="email"
+						name="email"
 					/>
-					<InputRightElement width="4.5rem">
-						<Button h="1.75rem" size="sm" onClick={handleClick}>
-							{show ? "Hide" : "Show"}
-						</Button>
-					</InputRightElement>
-				</InputGroup>
 
-				<Button mt={4} colorScheme="blue" type="submit">
-					Submit
-				</Button>
-			</FormControl>
+					<FormLabel mt={4}>Enter password:</FormLabel>
+					<InputGroup size="md">
+						<Input
+							pr="4.5rem"
+							type={show ? "text" : "password"}
+							placeholder="Enter password..."
+							name="password"
+							value={loginCreds.password}
+							onChange={handleLoginChange}
+						/>
+						<InputRightElement width="4.5rem">
+							<Button h="1.75rem" size="sm" onClick={handleClick}>
+								{show ? "Hide" : "Show"}
+							</Button>
+						</InputRightElement>
+					</InputGroup>
+
+					<Button mt={4} colorScheme="blue" type="submit">
+						Submit
+					</Button>
+				</FormControl>
+			</form>
 		</div>
 	);
 };
