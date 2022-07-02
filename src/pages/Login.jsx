@@ -21,8 +21,8 @@ const Login = () => {
 	const handleClick = () => setShow(!show);
 
 	const [loginCreds, setLoginCreds] = useState({
-		email: "",
-		password: "",
+		email: "eve.holt@reqres.in",
+		password: "cityslicka",
 	});
 
 	const handleLoginChange = (e) => {

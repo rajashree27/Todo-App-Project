@@ -1,9 +1,19 @@
 {
   "todos": [
     {
-      "title": "Learn Redux",
-      "isCompleted": false,
+      "title": "Learning Redux",
+      "isCompleted": true,
       "id": 1
+    },
+    {
+      "title": "Learn React",
+      "isCompleted": false,
+      "id": 2
+    },
+    {
+      "title": "Go shopping",
+      "isCompleted": false,
+      "id": 3
     }
   ]
 }

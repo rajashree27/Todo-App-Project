@@ -44,7 +44,7 @@ const TodoList = () => {
 	if (isLoading) {
 		return <Text fontSize='xl' as='i'>Loading!!!...</Text>;
 	} else if (isError) {
-		return <Text fontSize='xl' as='i' color='tomato'>Something went wrong!!!...</Text>;
+		return <Text fontSize='xl' as='i' color='tomato'>Something went wrong!!!...JSON Server not running might be the issue</Text>;
 	} else
 		return (
 			<Box alignItems='center'>
